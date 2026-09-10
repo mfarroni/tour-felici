@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
 });
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -14,8 +22,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Tour Felici srl — Dolomiti since 1984",
-  description: "Agenzia di pubblica utilità per una cultura del bel vivere in montagna. Guida Alpina, natura, storia, agricoltura, sport, cultura e ripopolamento nelle Dolomiti.",
+  title: "Tour Felici srl — Custodi della Montagna dal 1984 | Dolomiti",
+  description:
+    "Agenzia di pubblica utilità e servizi per l'ambiente nelle Dolomiti UNESCO. Guide Alpine IFMGA, tutela della biodiversità, educazione ecologica e comunità locali.",
 };
 
 export default function RootLayout({
@@ -24,12 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it">
+    <html lang="it" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfair.variable} ${inter.variable} ${geistMono.variable} font-sans bg-dolomia-light text-ardesia antialiased min-h-screen selection:bg-ocra selection:text-abete-dark`}
       >
         {children}
       </body>
     </html>
   );
 }
+
