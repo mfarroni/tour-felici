@@ -1,76 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
   <defs>
-    <!-- Gradiente cielo alba calda -->
-    <linearGradient id="favSky" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="favSkyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#E58348" />
       <stop offset="50%" stop-color="#F2A65A" />
       <stop offset="100%" stop-color="#FCD58E" />
     </linearGradient>
-
-    <!-- Gradiente roccia Tre Cime - Luce -->
-    <linearGradient id="favLight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF5DF" />
-      <stop offset="100%" stop-color="#E5BE78" />
+    <linearGradient id="favGoldBanner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E3B5" />
+      <stop offset="100%" stop-color="#DCB76C" />
     </linearGradient>
-
-    <!-- Gradiente roccia Tre Cime - Ombra -->
-    <linearGradient id="favShadow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4F4239" />
-      <stop offset="100%" stop-color="#241E1A" />
-    </linearGradient>
+    <clipPath id="favCircleClip">
+      <circle cx="50" cy="46" r="42" />
+    </clipPath>
   </defs>
 
-  <!-- Cornice circolare blu navy del badge -->
-  <circle cx="32" cy="32" r="30" fill="#1C2738" stroke="#F5E3B5" stroke-width="2.5" />
+  <!-- Bordo e cerchio stemma maglietta (senza sfondo quadrato esterno) -->
+  <circle cx="50" cy="50" r="48" fill="#1C2738" stroke="#F5E3B5" stroke-width="2.5" />
+  <circle cx="50" cy="50" r="45.5" fill="none" stroke="#E58348" stroke-width="0.8" />
 
-  <!-- Maschera tonda per il paesaggio -->
-  <clipPath id="favClip">
-    <circle cx="32" cy="32" r="27.5" />
-  </clipPath>
+  <g clip-path="url(#favCircleClip)">
+    <!-- Cielo alba -->
+    <rect x="0" y="0" width="100" height="75" fill="url(#favSkyGrad)" />
+    <!-- Sole nascente tra le Tre Cime -->
+    <circle cx="50" cy="38" r="14" fill="#FFF8E7" />
+    <!-- Raggi del sole -->
+    <line x1="50" y1="20" x2="50" y2="12" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="38" y1="26" x2="32" y2="18" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="62" y1="26" x2="68" y2="18" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="28" y1="38" x2="20" y2="38" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round" />
+    <line x1="72" y1="38" x2="80" y2="38" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round" />
 
-  <g clip-path="url(#favClip)">
-    <!-- Cielo -->
-    <rect x="0" y="0" width="64" height="64" fill="url(#favSky)" />
+    <!-- Tre Cime di Lavaredo -->
+    <!-- Cima Sinistra -->
+    <polygon points="36,36 40,40 37,56 31,56" fill="#FDF3DB" />
+    <polygon points="36,36 31,56 24,56 27,45" fill="#3D3025" />
 
-    <!-- Sole nascente tra le cime -->
-    <circle cx="32" cy="24" r="9" fill="#FFF8E7" opacity="0.95" />
-    <!-- Raggi stilizzati ultra-puliti -->
-    <line x1="32" y1="12" x2="32" y2="7" stroke="#FFF8E7" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="23" y1="16" x2="19" y2="12" stroke="#FFF8E7" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="41" y1="16" x2="45" y2="12" stroke="#FFF8E7" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="18" y1="24" x2="13" y2="24" stroke="#FFF8E7" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="46" y1="24" x2="51" y2="24" stroke="#FFF8E7" stroke-width="1.5" stroke-linecap="round" />
+    <!-- Cima Centrale (più alta) -->
+    <polygon points="50,26 56,34 53,56 46,56" fill="#FDF3DB" />
+    <polygon points="50,26 46,56 40,56 42,38" fill="#3D3025" />
+    <polygon points="50,26 48,30 52,30" fill="#FFFFFF" />
 
-    <!-- TRE CIME DI LAVAREDO (Silhouette geometrica ad alto contrasto per 16x16 / 32x32) -->
-    
-    <!-- CIMA SINISTRA -->
-    <!-- Versante luce -->
-    <polygon points="23,24 26,26 24,38 20,38" fill="url(#favLight)" />
-    <!-- Versante ombra -->
-    <polygon points="23,24 20,38 15,38 17,29" fill="url(#favShadow)" />
+    <!-- Cima Destra -->
+    <polygon points="64,34 70,42 66,56 60,56" fill="#FDF3DB" />
+    <polygon points="64,34 60,56 55,56 58,42" fill="#3D3025" />
+    <polygon points="64,34 62,37 66,37" fill="#FFFFFF" />
 
-    <!-- CIMA CENTRALE (Più alta) -->
-    <!-- Versante luce -->
-    <polygon points="32,18 36,22 35,38 30,38" fill="url(#favLight)" />
-    <!-- Versante ombra -->
-    <polygon points="32,18 30,38 26,38 27,27" fill="url(#favShadow)" />
-    <polygon points="32,18 31,21 33,21" fill="#FFFFFF" />
+    <!-- Ghiaione e sentiero -->
+    <polygon points="10,68 50,54 90,68 95,80 5,80" fill="#DEC091" />
+    <path d="M 50 56 Q 52 62 49 68 T 51 76" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
 
-    <!-- CIMA DESTRA -->
-    <!-- Versante luce -->
-    <polygon points="41,23 44,27 43,38 38,38" fill="url(#favLight)" />
-    <!-- Versante ombra -->
-    <polygon points="41,23 38,38 35,38 37,27" fill="url(#favShadow)" />
-    <polygon points="41,23 40,25 42,25" fill="#FFFFFF" />
-
-    <!-- Base di ghiaia e sentiero -->
-    <polygon points="10,44 32,37 54,44 60,52 4,52" fill="#D8B57D" />
-    <path d="M 32 38 Q 34 42 32 46 T 33 52" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
-
-    <!-- Targa stilizzata inferiore con acronimo TF e 1984 -->
-    <rect x="10" y="44" width="44" height="13" rx="2.5" fill="#F5E3B5" stroke="#1C2738" stroke-width="1.2" />
-    <text x="32" y="53" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="7.5" fill="#1C2738" text-anchor="middle" letter-spacing="1">
-      TF 1984
+    <!-- Targa Centrale TOUR FELICI SRL -->
+    <rect x="8" y="62" width="84" height="15" rx="2.5" fill="url(#favGoldBanner)" stroke="#1C2738" stroke-width="1.2" />
+    <text x="50" y="70" font-size="6" font-weight="900" fill="#1C2738" text-anchor="middle" font-family="'Inter', sans-serif" letter-spacing="0.4">
+      TOUR FELICI SRL
+    </text>
+    <text x="50" y="75" font-size="3.5" font-weight="800" fill="#B36E27" text-anchor="middle" font-family="'Inter', sans-serif" letter-spacing="0.8">
+      DOLOMITI SINCE 1984
     </text>
   </g>
+
+  <!-- Arco inferiore EMOZIONI AD ALTA QUOTA -->
+  <text x="50" y="89" font-size="4" font-weight="800" fill="#F5E3B5" text-anchor="middle" font-family="'Inter', sans-serif" letter-spacing="0.8">
+    EMOZIONI AD ALTA QUOTA
+  </text>
 </svg>

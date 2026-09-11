@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import HeroSlider from '@/components/HeroSlider';
 import BentoGrid from '@/components/BentoGrid';
 import { GrigliaPilastri } from '@/components/CardPilastro';
 import NewsletterForm from '@/components/NewsletterForm';
@@ -11,90 +12,8 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1">
-        {/* Hero Section ad altissimo impatto */}
-        <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-abete-dark">
-          {/* Sfondo fotografico d'autore delle vette dolomitiche con foschia */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2000&q=85"
-              alt="Cime delle Dolomiti nella foschia all'alba"
-              className="w-full h-full object-cover object-center opacity-45 scale-105 transition-transform duration-1000"
-            />
-            {/* Sovrapposizione a gradiente verde abete e curve topografiche */}
-            <div className="hero-overlay absolute inset-0" />
-            <div className="absolute inset-0 bg-topo-dark opacity-15" />
-          </div>
-
-          <div className="relative z-10 text-center max-w-5xl mx-auto px-2">
-            {/* Logo Stemma Ufficiale della Maglietta con Tre Cime (senza sfondo blu esterno) */}
-            <div className="mb-6 flex justify-center">
-              <div className="relative w-32 h-32 sm:w-36 sm:h-36 transition-transform duration-500 hover:scale-105 filter drop-shadow-2xl">
-                <img
-                  src="/images/tour-felici-badge.svg"
-                  alt="Stemma Storico Tour Felici - Tre Cime di Lavaredo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Tagline Heritage */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ocra-light text-xs font-semibold uppercase tracking-[0.25em] mb-6 shadow-inner">
-              <span className="w-2 h-2 rounded-full bg-ocra"></span>
-              Dolomiti UNESCO · Dal 1984
-            </div>
-
-            {/* Titolo Monumentale Serif */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-[1.08] tracking-tight">
-              Tour Felici — <br className="hidden sm:inline" />
-              <span className="italic font-normal text-dolomia">Custodi della Montagna</span>{' '}
-              <span className="font-serif italic text-ocra text-3xl sm:text-5xl md:text-6xl block sm:inline mt-2 sm:mt-0 font-normal">
-                dal 1984
-              </span>
-            </h1>
-
-            {/* Sottotitolo Valoriale */}
-            <p className="text-lg sm:text-2xl text-dolomia-light/90 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-              Esperienze Alpine Autentiche, Preservazione dell'Ecosistema Dolomitico e Sostegno Attivo alle Comunità Locali.
-            </p>
-
-            {/* Call to Action */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <Link
-                href="#servizi-ambientali"
-                className="w-full sm:w-auto bg-ocra hover:bg-ocra-light text-abete-dark font-bold text-sm uppercase tracking-wider py-4 px-9 rounded-full shadow-alpine-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2"
-              >
-                <span>Esplora la Montagna</span>
-                <span className="text-base">↓</span>
-              </Link>
-              <Link
-                href="/guide-alpine"
-                className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/25 font-semibold text-sm uppercase tracking-wider py-4 px-8 rounded-full backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <span>⛰️ Le Guide Alpine</span>
-              </Link>
-            </div>
-
-            {/* Badge Indicatori Chiave */}
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/15 max-w-4xl mx-auto text-left">
-              <div className="p-3">
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-ocra">40+</div>
-                <div className="text-xs text-dolomia/80 mt-0.5">Anni di Presenza Attiva</div>
-              </div>
-              <div className="p-3">
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-white">100%</div>
-                <div className="text-xs text-dolomia/80 mt-0.5">Guide Alpine IFMGA</div>
-              </div>
-              <div className="p-3">
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400">0%</div>
-                <div className="text-xs text-dolomia/80 mt-0.5">Turismo Predatorio</div>
-              </div>
-              <div className="p-3">
-                <div className="text-2xl sm:text-3xl font-bold font-mono text-dolomia">14</div>
-                <div className="text-xs text-dolomia/80 mt-0.5">Borghi & Comunità Partner</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Hero Slider a tutta larghezza con foto HD, logo centrale e titolo rimodulato */}
+        <HeroSlider />
 
         {/* Bento Grid: Servizi per l'Ambiente & Ecosostenibilità */}
         <BentoGrid />
