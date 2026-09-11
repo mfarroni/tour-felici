@@ -208,9 +208,11 @@ export default function Home() {
           {/* Colonna 1: Identità */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-ocra text-abete-dark flex items-center justify-center font-bold">
-                TF
-              </div>
+              <img
+                src="/icon.svg"
+                alt="Logo Tour Felici"
+                className="w-9 h-9 rounded-xl shadow-sm"
+              />
               <span className="font-serif font-bold text-2xl text-white">
                 Tour Felici srl
               </span>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgApple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14241D" />
+      <stop offset="100%" stop-color="#1C3329" />
+    </linearGradient>
+    <linearGradient id="goldLightA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFB277" />
+      <stop offset="100%" stop-color="#C89B5C" />
+    </linearGradient>
+    <linearGradient id="goldDarkA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C89B5C" />
+      <stop offset="100%" stop-color="#A67C41" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sfondo 180x180 per Apple Touch Icon -->
+  <rect width="180" height="180" rx="40" fill="url(#bgApple)" />
+
+  <g transform="translate(26, 26) scale(0.78)">
+    <!-- Stella Alpina / Stella Guida a 8 punte -->
+    <g transform="translate(64, 30)">
+      <polygon points="0,-13 3.5,-3.5 13,0 3.5,3.5 0,13 -3.5,3.5 -13,0 -3.5,-3.5" fill="#F4F1EA" />
+      <polygon points="0,-9 2.5,-2.5 9,0 2.5,2.5 0,9 -2.5,2.5 -9,0 -2.5,-2.5" fill="url(#goldLightA)" transform="rotate(45)" />
+      <circle cx="0" cy="0" r="2" fill="#1C3329" />
+    </g>
+
+    <!-- Silhouette Geometrica delle Vette Dolomitiche -->
+    <g transform="translate(0, 4)">
+      <polygon points="28,82 45,56 58,74 44,98" fill="url(#goldLightA)" />
+      <polygon points="45,56 58,74 52,86 42,70" fill="#F4F1EA" />
+
+      <polygon points="84,58 100,82 86,100 74,78" fill="url(#goldDarkA)" />
+      <polygon points="84,58 74,78 68,70 78,54" fill="#E8E3DC" />
+
+      <polygon points="64,48 44,98 64,108 64,74" fill="url(#goldLightA)" />
+      <polygon points="44,98 64,108 52,112 36,94" fill="url(#goldDarkA)" />
+
+      <polygon points="64,48 64,108 86,100 76,74" fill="#FAF8F5" />
+      <polygon points="64,74 76,74 86,100 64,108" fill="#E8E3DC" />
+
+      <line x1="64" y1="48" x2="64" y2="108" stroke="#1C3329" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   title: "Tour Felici srl — Custodi della Montagna dal 1984 | Dolomiti",
   description:
     "Agenzia di pubblica utilità e servizi per l'ambiente nelle Dolomiti UNESCO. Guide Alpine IFMGA, tutela della biodiversità, educazione ecologica e comunità locali.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/apple-icon.svg",
+  },
 };
 
 export default function RootLayout({

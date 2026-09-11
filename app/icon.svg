@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14241D" />
+      <stop offset="100%" stop-color="#1C3329" />
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFB277" />
+      <stop offset="100%" stop-color="#C89B5C" />
+    </linearGradient>
+    <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C89B5C" />
+      <stop offset="100%" stop-color="#A67C41" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sfondo Quadrato Smussato Verde Abete -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)" />
+
+  <!-- Stella Alpina / Stella Guida a 8 punte -->
+  <g transform="translate(64, 30)">
+    <!-- Punte principali verticali/orizzontali -->
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#F4F1EA" />
+    <!-- Punte diagonali dorate -->
+    <polygon points="0,-8 2,-2 8,0 2,2 0,8 -2,2 -8,0 -2,-2" fill="url(#goldLight)" transform="rotate(45)" />
+    <circle cx="0" cy="0" r="1.8" fill="#1C3329" />
+  </g>
+
+  <!-- Silhouette Geometrica delle Vette Dolomitiche -->
+  <g transform="translate(0, 4)">
+    <!-- Cima Sinistra - Faccia Ocra -->
+    <polygon points="28,82 45,56 58,74 44,98" fill="url(#goldLight)" />
+    <!-- Cima Sinistra - Faccia Dolomia -->
+    <polygon points="45,56 58,74 52,86 42,70" fill="#F4F1EA" />
+
+    <!-- Cima Destra - Faccia Ocra -->
+    <polygon points="84,58 100,82 86,100 74,78" fill="url(#goldDark)" />
+    <!-- Cima Destra - Faccia Dolomia -->
+    <polygon points="84,58 74,78 68,70 78,54" fill="#E8E3DC" />
+
+    <!-- Cima Principale Centrale - Versante Ocra / Luce Mattutina -->
+    <polygon points="64,48 44,98 64,108 64,74" fill="url(#goldLight)" />
+    <polygon points="44,98 64,108 52,112 36,94" fill="url(#goldDark)" />
+
+    <!-- Cima Principale Centrale - Versante Dolomia / Calcare Roccioso -->
+    <polygon points="64,48 64,108 86,100 76,74" fill="#FAF8F5" />
+    <polygon points="64,74 76,74 86,100 64,108" fill="#E8E3DC" />
+
+    <!-- Cresta di raccordo centrale e linea di contrasto -->
+    <line x1="64" y1="48" x2="64" y2="108" stroke="#1C3329" stroke-width="1.2" stroke-linecap="round" />
+  </g>
+</svg>

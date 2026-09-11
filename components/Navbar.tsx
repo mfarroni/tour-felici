@@ -27,16 +27,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo Brand */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-ocra to-ocra-dark flex items-center justify-center text-abete-dark shadow-md transition-transform duration-300 group-hover:scale-105">
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
-                aria-hidden="true"
-              >
-                <path d="M14 6l7 12H3l4-7 3 5 4-10z" />
-              </svg>
-            </div>
+            <img
+              src="/icon.svg"
+              alt="Logo Tour Felici"
+              className="w-10 h-10 rounded-xl shadow-md transition-transform duration-300 group-hover:scale-105"
+            />
             <div>
               <span className="font-serif font-bold text-xl sm:text-2xl text-white tracking-wide block leading-none">
                 Tour Felici
