@@ -26,8 +26,19 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 text-center max-w-5xl mx-auto px-2">
+            {/* Logo Stemma Ufficiale della Maglietta con Tre Cime (senza sfondo blu esterno) */}
+            <div className="mb-6 flex justify-center">
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 transition-transform duration-500 hover:scale-105 filter drop-shadow-2xl">
+                <img
+                  src="/images/tour-felici-badge.svg"
+                  alt="Stemma Storico Tour Felici - Tre Cime di Lavaredo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
             {/* Tagline Heritage */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ocra-light text-xs font-semibold uppercase tracking-[0.25em] mb-8 shadow-inner">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ocra-light text-xs font-semibold uppercase tracking-[0.25em] mb-6 shadow-inner">
               <span className="w-2 h-2 rounded-full bg-ocra"></span>
               Dolomiti UNESCO · Dal 1984
             </div>
@@ -208,11 +219,13 @@ export default function Home() {
           {/* Colonna 1: Identità */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <img
-                src="/icon.svg"
-                alt="Logo Tour Felici"
-                className="w-9 h-9 rounded-xl shadow-sm"
-              />
+              <div className="relative w-11 h-11 shrink-0 filter drop-shadow-md">
+                <img
+                  src="/images/tour-felici-badge.svg"
+                  alt="Logo Stemma Tour Felici - Tre Cime di Lavaredo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span className="font-serif font-bold text-2xl text-white">
                 Tour Felici srl
               </span>

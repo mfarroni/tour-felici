@@ -25,13 +25,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo Brand */}
+          {/* Logo Brand con Stemma Ufficiale (senza sfondo esterno) */}
           <Link href="/" className="flex items-center gap-3 group">
-            <img
-              src="/icon.svg"
-              alt="Logo Tour Felici"
-              className="w-10 h-10 rounded-xl shadow-md transition-transform duration-300 group-hover:scale-105"
-            />
+            <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-105 shrink-0 filter drop-shadow-md">
+              <img
+                src="/images/tour-felici-badge.svg"
+                alt="Logo Stemma Tour Felici - Tre Cime di Lavaredo"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <div>
               <span className="font-serif font-bold text-xl sm:text-2xl text-white tracking-wide block leading-none">
                 Tour Felici
