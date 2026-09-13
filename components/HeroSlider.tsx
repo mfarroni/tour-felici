@@ -87,11 +87,11 @@ export default function HeroSlider() {
       {/* Contenuto Centrale Rimodulato */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-2">
         
-        {/* Logo Ufficiale Badge Maglietta Trasparente (Senza alone bianco) */}
+        {/* Logo Ufficiale Badge Maglietta Trasparente - Tour Felici Badge Trasparent */}
         <div className="mb-6 flex justify-center">
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 transition-transform duration-500 hover:scale-105">
             <img
-              src="/images/tour-felici-badge.svg"
+              src="/images/tour-felici-badge-transparent.png"
               alt="Logo Ufficiale Tour Felici SRL - Tre Cime di Lavaredo"
               className="w-full h-full object-contain filter drop-shadow-[0_15px_25px_rgba(0,0,0,0.65)]"
             />
