@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente cielo alba dolomitica -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E58348" />
+      <stop offset="45%" stop-color="#F2A65A" />
+      <stop offset="80%" stop-color="#FCD58E" />
+      <stop offset="100%" stop-color="#FDF0C8" />
+    </linearGradient>
+
+    <!-- Gradiente raccordi oro e banner -->
+    <linearGradient id="goldBanner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E3B5" />
+      <stop offset="50%" stop-color="#EED596" />
+      <stop offset="100%" stop-color="#DCB76C" />
+    </linearGradient>
+
+    <linearGradient id="peakLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF4DF" />
+      <stop offset="100%" stop-color="#E8C37C" />
+    </linearGradient>
+
+    <linearGradient id="peakShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F4239" />
+      <stop offset="100%" stop-color="#241E1A" />
+    </linearGradient>
+
+    <linearGradient id="peakMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C7752" />
+      <stop offset="100%" stop-color="#5E432E" />
+    </linearGradient>
+
+    <!-- Path per testo curvo inferiore -->
+    <path id="textArcBottom" d="M 95 350 A 185 185 0 0 0 405 350" fill="none" />
+  </defs>
+
+  <!-- Bordo esterno e cornice circolare blu navy notte -->
+  <circle cx="250" cy="250" r="240" fill="#1C2738" stroke="#F5E3B5" stroke-width="10" />
+  <circle cx="250" cy="250" r="228" fill="none" stroke="#E58348" stroke-width="3" />
+
+  <!-- Finestra interna circolare del paesaggio -->
+  <clipPath id="circleClip">
+    <circle cx="250" cy="235" r="215" />
+  </clipPath>
+
+  <g clip-path="url(#circleClip)">
+    <!-- Cielo dell'alba -->
+    <rect x="0" y="0" width="500" height="350" fill="url(#skyGrad)" />
+
+    <!-- Nuvole stilizzate all'orizzonte -->
+    <path d="M 30 180 Q 60 160 100 175 Q 130 155 165 170 L 165 200 L 30 200 Z" fill="#FDF3DB" opacity="0.65" />
+    <path d="M 340 175 Q 380 150 420 170 Q 450 160 480 175 L 480 200 L 340 200 Z" fill="#FDF3DB" opacity="0.65" />
+
+    <!-- Sole nascente dietro le Tre Cime -->
+    <circle cx="250" cy="180" r="55" fill="#FFF8E7" opacity="0.95" />
+    <!-- Raggi del sole -->
+    <g stroke="#FFF8E7" stroke-width="3" opacity="0.6" stroke-linecap="round">
+      <line x1="250" y1="110" x2="250" y2="70" />
+      <line x1="210" y1="125" x2="180" y2="90" />
+      <line x1="290" y1="125" x2="320" y2="90" />
+      <line x1="180" y1="155" x2="140" y2="135" />
+      <line x1="320" y1="155" x2="360" y2="135" />
+      <line x1="165" y1="185" x2="120" y2="180" />
+      <line x1="335" y1="185" x2="380" y2="180" />
+    </g>
+
+    <!-- Gruppo montuoso: Tre Cime di Lavaredo -->
+    <!-- CIMA PICCOLA (Sinistra) -->
+    <!-- Faccia illuminata -->
+    <polygon points="175,180 195,195 185,275 160,285 145,225" fill="url(#peakLight)" />
+    <!-- Faccia in ombra -->
+    <polygon points="175,180 145,225 125,235 115,280 160,285" fill="url(#peakShadow)" />
+    <polygon points="145,225 175,180 160,285" fill="url(#peakMid)" />
+
+    <!-- CIMA GRANDE (Centrale) -->
+    <!-- Cresta e facciata Est illuminata dal sole -->
+    <polygon points="250,135 275,170 265,275 220,285 205,190" fill="url(#peakLight)" />
+    <!-- Faccia Nord/Ovest in ombra rocciosa -->
+    <polygon points="250,135 205,190 190,240 185,275 220,285" fill="url(#peakShadow)" />
+    <!-- Dettagli e canaloni -->
+    <polygon points="230,175 250,135 240,245" fill="url(#peakMid)" />
+    <!-- Spolverata di neve in vetta -->
+    <polygon points="250,135 242,150 258,152" fill="#FFFFFF" />
+
+    <!-- CIMA OVEST (Destra) -->
+    <!-- Faccia illuminata -->
+    <polygon points="325,175 350,210 335,280 295,285 285,195" fill="url(#peakLight)" />
+    <!-- Faccia in ombra -->
+    <polygon points="325,175 350,210 375,230 385,280 335,280" fill="url(#peakShadow)" />
+    <polygon points="315,190 325,175 335,280" fill="url(#peakMid)" />
+    <polygon points="325,175 320,186 332,188" fill="#FFFFFF" />
+
+    <!-- Ghiaione basale e sentiero alpino -->
+    <polygon points="90,320 250,270 410,320 450,360 50,360" fill="#DEC091" />
+    <!-- Sentiero sinuoso verso la forcella -->
+    <path d="M 250 275 Q 260 295 245 315 T 255 350" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.9" />
+    <!-- Dettagli screziature ghiaia -->
+    <polygon points="120,295 190,278 215,310" fill="#C5A472" opacity="0.6" />
+    <polygon points="380,295 310,278 285,310" fill="#9B7C4F" opacity="0.5" />
+  </g>
+
+  <!-- Targa / Banner Centrale "TOUR FELICI SRL" -->
+  <g transform="translate(0, 10)">
+    <!-- Ombra della targa -->
+    <path d="M 55 318 L 445 318 L 445 388 L 55 388 Z" fill="#0E141E" />
+    <!-- Targa beige / crema chiaro -->
+    <rect x="50" y="310" width="400" height="72" rx="10" fill="url(#goldBanner)" stroke="#1C2738" stroke-width="6" />
+
+    <!-- Testo Principale: TOUR FELICI SRL -->
+    <text x="250" y="348" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#1C2738" text-anchor="middle" letter-spacing="2">
+      TOUR FELICI SRL
+    </text>
+
+    <!-- Sottotitolo: DOLOMITI SINCE 1984 -->
+    <text x="250" y="372" font-family="'Inter', 'Helvetica', sans-serif" font-weight="800" font-size="16" fill="#B36E27" text-anchor="middle" letter-spacing="4">
+      DOLOMITI SINCE 1984
+    </text>
+  </g>
+
+  <!-- Testo ad arco inferiore: EMOZIONI AD ALTA QUOTA -->
+  <text font-family="'Inter', 'Arial Black', sans-serif" font-weight="800" font-size="17" fill="#F5E3B5" letter-spacing="5">
+    <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+      EMOZIONI AD ALTA QUOTA
+    </textPath>
+  </text>
+</svg>
